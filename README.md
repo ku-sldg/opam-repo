@@ -2,6 +2,10 @@
 
 This is an opam repository for packages created and maintained by KU-SLDG.
 
+**Primary Maintainer**: [Durbatuluk1701](https://github.com/Durbatuluk1701)
+
+Please feel free to reach out for help installing or getting a package added to this repo.
+
 ## Installation
 
 Run the following:
