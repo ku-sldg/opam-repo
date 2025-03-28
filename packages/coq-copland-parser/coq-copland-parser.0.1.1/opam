@@ -1,0 +1,44 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "30wthomas@ku.edu"
+
+homepage: "https://github.com/ku-sldg/copland-parser"
+dev-repo: "git+https://github.com/ku-sldg/copland-parser.git"
+bug-reports: "https://github.com/ku-sldg/copland-parser/issues"
+license: "CC-BY-SA-4.0"
+
+synopsis: "A parser for the Copland language"
+description: """
+A parser for the Copland DSL for layered attestation"""
+
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "ocaml" { >= "4.12~" }
+  "dune" {>= "3.17"}
+  "coq" 
+  "coq-ext-lib" { >= "0.13.0" }
+  "coq-json" { >= "0.2.0" }
+  "rocq-candy" { >= "0.2.2" }
+  "coq-copland-spec" { >= "0.1.1" }
+  "coq-parsec" { >= "0.2.0" }
+  "menhir" { >= "20240715" }
+  "coq-menhirlib" { >= "20240715" }
+  "coq-quickchick" { >= "2.1.0" }
+]
+
+tags: [
+  "logpath:copland-parser"
+]
+authors: [
+  "Will Thomas <30wthomas@ku.edu>"
+]
+url {
+  src:
+    "https://github.com/ku-sldg/copland-parser/archive/refs/tags/0.1.1.tar.gz"
+  checksum: [
+    "md5=fd339d2565ecdf75adce68e8d82f73ff"
+    "sha512=fb099497e228837ece50962382f098c3c6f6fc225bc8793c296a3e7fef97212e99c151db9b271f49af2c3e4e4cdb252f67d1d318de6f0d0c3948215a815cfb30"
+  ]
+}
