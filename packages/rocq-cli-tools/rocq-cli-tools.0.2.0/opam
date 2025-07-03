@@ -1,0 +1,35 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "30wthomas@ku.edu"
+
+homepage: "https://github.com/ku-sldg/rocq-cli-tools"
+dev-repo: "git+https://github.com/ku-sldg/rocq-cli-tools.git"
+bug-reports: "https://github.com/ku-sldg/rocq-cli-tools/issues"
+license: "CC-BY-SA-4.0"
+
+synopsis: "A library provided high-level command line tools and parsing for programs written in Rocq"
+
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "ocaml" { >= "4.12~" }
+  "dune" {>= "3.17"}
+  "coq" 
+  "rocq-candy" { >= "0.2.1" }
+]
+
+tags: [
+  "logpath:rocq-cli-tools"
+]
+authors: [
+  "Will Thomas <30wthomas@ku.edu>"
+]
+url {
+  src:
+    "https://github.com/ku-sldg/rocq-cli-tools/archive/refs/tags/v0.2.0.tar.gz"
+  checksum: [
+    "md5=5bbf356a74a5bc09996724daffc2d4f0"
+    "sha512=f7dc203f2260a35ddb2559667160f155a731583c402b34881ee0a8f22d9254d95c14f7528acfb7cec969b8b243521db258bb08b5c9c8eeaf795ffcef883d24b1"
+  ]
+}
