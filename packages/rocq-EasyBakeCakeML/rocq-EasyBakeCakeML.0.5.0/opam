@@ -1,0 +1,39 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "30wthomas@ku.edu"
+
+homepage: "https://github.com/Durbatuluk1701/EasyBakeCakeML"
+dev-repo: "git+https://github.com/Durbatuluk1701/EasyBakeCakeML.git"
+bug-reports: "https://github.com/Durbatuluk1701/EasyBakeCakeML/issues"
+license: "CC-BY-SA-4.0"
+
+synopsis: "An extraction plugin for CakeML"
+description: """
+An extraction plugin for CakeML that does not require any semantic preservation proofs."""
+
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "ocaml" { >= "4.13~" }
+  "dune" {>= "3.17"}
+  "coq" 
+]
+
+tags: [
+  "keyword:CakeML"
+  "keyword:Extraction"
+  "logpath:EasyBakeCakeML"
+]
+authors: [
+  "TJ Barclay"
+  "Will Thomas <30wthomas@ku.edu>"
+]
+url {
+  src:
+    "https://github.com/Durbatuluk1701/EasyBakeCakeML/archive/refs/tags/v0.5.0.tar.gz"
+  checksum: [
+    "md5=99563c12dc90e1cf9f34cee241002ac5"
+    "sha512=6308d8dd71bcc88aa93f12e155764317495b2cbe81ba2f7cba8e3b215b1ba02146ab43a06da61480f41d6af88d022c98080ccdcd086033237fde798e5291741a"
+  ]
+}
