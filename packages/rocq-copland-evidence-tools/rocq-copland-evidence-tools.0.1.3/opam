@@ -1,0 +1,42 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "30wthomas@ku.edu"
+
+homepage: "https://github.com/ku-sldg/copland-evidence-tools"
+dev-repo: "git+https://github.com/ku-sldg/copland-evidence-tools.git"
+bug-reports: "https://github.com/ku-sldg/copland-evidence-tools/issues"
+license: "CC-BY-SA-4.0"
+
+synopsis: "Tools for working with evidence in the Copland language"
+description: """
+This project provides tools and libraries for working with evidence in the Copland programming language."""
+
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "ocaml" { >= "4.12~" }
+  "dune" {>= "3.17"}
+  "coq" 
+  "rocq-candy" { >= "0.2.1" }
+  "rocq-cli-tools" { >= "0.2.0" }
+  "rocq-json" { >= "0.2.0" }
+  "rocq-copland-spec" { >= "0.2.1" }
+  "bake" { >= "0.1.0" }
+  "rocq-EasyBakeCakeML" { >= "0.1.0" }
+]
+
+tags: [
+  "logpath:copland-evidence-tools"
+]
+authors: [
+  "Will Thomas <30wthomas@ku.edu>"
+]
+url {
+  src:
+    "https://github.com/ku-sldg/copland-evidence-tools/archive/refs/tags/v0.1.3.tar.gz"
+  checksum: [
+    "md5=c5bb6fe0f76470bca7f87b79baebaea9"
+    "sha512=0d503e5d42b3a0a6fa2f29b8abbd4eeb7a78aeb99ddf649d1cbe0bd6a1fca46e5340d023a0f11e186b6f3f435636414a087a0c86f99c761602ea0bdd1000e3c2"
+  ]
+}
