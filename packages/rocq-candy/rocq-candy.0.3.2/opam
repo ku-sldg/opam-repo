@@ -1,0 +1,36 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "30wthomas@ku.edu"
+
+homepage: "https://github.com/ku-sldg/rocq-candy"
+dev-repo: "git+https://github.com/ku-sldg/rocq-candy.git"
+bug-reports: "https://github.com/ku-sldg/rocq-candy/issues"
+license: "CC-BY-SA-4.0"
+
+synopsis: "Snippets of nice and useful Rocq code utilized by the KU-SLDG Lab"
+description: """
+This library contains snippets of nice and useful Rocq code utilized by the KU-SLDG Lab. It is not intended to be a full-fledged library, but rather a collection of useful code that can be shared between projects."""
+
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "ocaml" { >= "4.12~" }
+  "dune" {>= "3.17"}
+  "coq" 
+]
+
+tags: [
+  "logpath:rocq-candy"
+]
+authors: [
+  "Will Thomas <30wthomas@ku.edu>"
+]
+url {
+  src:
+    "https://github.com/ku-sldg/rocq-candy/archive/refs/tags/v0.3.2.tar.gz"
+  checksum: [
+    "md5=dd4857862fe728b00c587a05be8bd33d"
+    "sha512=67730b4c4062fafab664a09b028bb47887ad7a16ffe60f2ab11b3e3a7c6963e2530ce958051b9ba9eb09df67f4424a04bb55f0f6d14bcc2f05e18c79bc5657d4"
+  ]
+}
