@@ -1,0 +1,36 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "30wthomas@ku.edu"
+
+homepage: "https://github.com/ku-sldg/rocq-json"
+dev-repo: "git+https://github.com/ku-sldg/rocq-json.git"
+bug-reports: "https://github.com/ku-sldg/rocq-json/issues"
+license: "CC-BY-SA-4.0"
+
+synopsis: "A Rocq JSON Library, built with automation and extractability in mind"
+description: """
+A Rocq JSON Library, built with automation and extractability in mind"""
+
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "ocaml" { >= "4.12~" }
+  "dune" {>= "3.17"}
+  "coq" 
+  "rocq-candy" { >= "0.6.0" }
+]
+
+tags: [
+  "logpath:rocq-json"
+]
+authors: [
+  "Will Thomas <30wthomas@ku.edu>"
+]
+url {
+  src: "https://github.com/ku-sldg/rocq-json/archive/refs/tags/v0.6.0.tar.gz"
+  checksum: [
+    "md5=d2f67a583f4abbd231c8dbaa1b0d701a"
+    "sha512=a2ee625f252c0e1ab0c03fc1a9ac6b4055978410ff27c88b70e026518aaf2b79c24fa5ed3da2b0b9b3e860e3e97b589b7539be9a9762fa42b8a9ca0daa951f9a"
+  ]
+}
