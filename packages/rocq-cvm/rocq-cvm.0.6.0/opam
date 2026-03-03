@@ -1,0 +1,51 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "30wthomas@ku.edu"
+
+homepage: "https://github.com/ku-sldg/cvm"
+dev-repo: "git+https://github.com/ku-sldg/cvm.git"
+bug-reports: "https://github.com/ku-sldg/cvm/issues"
+license: "CC-BY-SA-4.0"
+
+synopsis: "The Copland Virtual Machine (CVM)"
+description: """
+The Copland Virtual Machine (CVM) is a Rocq library that formalizes a virtual machine for the Copland Domain Specific Language for layered remote attestation."""
+
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "ocaml" { >= "4.12~" }
+  "dune" {>= "3.17"}
+  "coq"  { = "9.0.1" }
+  "rocq-candy" { >= "0.6.0" }
+  "rocq-copland-spec" { >= "0.6.0" }
+  "rocq-copland-manifest-tools" { >= "0.6.0" }
+  "rocq-EasyBakeCakeML" { >= "0.5.0" }
+  "bake" { >= "1.4.0" }
+  "rocq-logging" { >= "0.1.2" }
+  "conf-zmq" { >= "0.1" }
+]
+
+tags: [
+  "logpath:cvm"
+]
+authors: [
+  "Will Thomas <30wthomas@ku.edu>"
+]
+
+depexts: [
+  ["libzmq3-dev"] {os-distribution = "debian" | os-distribution = "ubuntu"}
+  ["zeromq"] {os-distribution = "arch" | os-distribution = "nixos"}
+  ["zeromq"] {os-distribution = "homebrew" & os = "macos"}
+  ["zeromq-devel"] {os-distribution = "centos" | os-distribution = "fedora" | os-distribution = "opensuse" | os-distribution = "rhel"}
+  ["zeromq-dev"] {os-distribution = "alpine"}
+  ["cygwin-devel" "libzmq-devel"] {os-distribution = "cygwin"}
+]
+url {
+  src: "https://github.com/ku-sldg/cvm/archive/refs/tags/v0.6.0.tar.gz"
+  checksum: [
+    "md5=ab3099efeaffdb4bd2f3656ca0c0fdd3"
+    "sha512=056b24fb9a36ef8c058141faa6569c4f8215aea4764ad9e11ab3401a4da3f151b40552c895fa7cdc084290d0ed4d61818ae1a37927368226b068c42807398de8"
+  ]
+}
